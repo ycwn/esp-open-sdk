@@ -1,0 +1,16 @@
+diff -upr gcc-4.8.5-gdc_2_068_2/gcc/d/d-lang.cc gcc-4.8.5-gdc_2_068_2_defs/gcc/d/d-lang.cc
+--- gcc-4.8.5-gdc_2_068_2/gcc/d/d-lang.cc	2018-09-02 17:46:06.786938673 +0300
++++ gcc-4.8.5-gdc_2_068_2_defs/gcc/d/d-lang.cc	2018-09-19 00:38:09.320979483 +0300
+@@ -279,6 +279,12 @@ d_init()
+   TARGET_CPU_D_BUILTINS();
+   TARGET_OS_D_BUILTINS();
+ 
++  VersionCondition::addPredefinedGlobalIdent("BareMetal");
++  VersionCondition::addPredefinedGlobalIdent("Xtensa");
++  VersionCondition::addPredefinedGlobalIdent("Xtensa_LX106");
++  VersionCondition::addPredefinedGlobalIdent("ESP");
++  VersionCondition::addPredefinedGlobalIdent("ESP_8266");
++
+   VersionCondition::addPredefinedGlobalIdent ("GNU");
+   VersionCondition::addPredefinedGlobalIdent ("D_Version2");
+ 
